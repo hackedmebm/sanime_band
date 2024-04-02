@@ -32,7 +32,6 @@ function deletePost(comment) {
     });
 }
 
-//cron.schedule('* * * * *', () => {
 
 setInterval(function() {
     //var myJSONObject = { ... };
@@ -65,7 +64,26 @@ setInterval(function() {
         console.log(`${error}`);
     }
 }, the_interval);
-  //});
+
+//cron.schedule('* * * * *', () => {});
+var min = 10, the_interval2 = min * 60 * 1000;
+setInterval(function() {
+   console.log('Rstarting.........');
+    try {
+        request({
+        url: "https://sanime-band.onrender.com/",
+        method: "GET",
+       
+        }, function (error, response, body){
+        if(response.statusCode==200){
+           console.log('Rstart Completed.........');
+        }
+       
+    });} catch (error) {
+        console.log(`${error}`);
+    }
+}, the_interval2);
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
