@@ -1,6 +1,6 @@
 import express from "express";
 import request  from "request";
-import cron  from 'node-cron';
+//import cron  from 'node-cron';
 
 import qs  from "qs";
 
@@ -32,10 +32,9 @@ function deletePost(comment) {
     });
 }
 
-cron.schedule('* * * * *', () => {
+//cron.schedule('* * * * *', () => {
 
-
-//setInterval(function() {
+setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
@@ -65,8 +64,8 @@ cron.schedule('* * * * *', () => {
     });} catch (error) {
         console.log(`${error}`);
     }
-//}, the_interval);
-  });
+}, the_interval);
+  //});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
