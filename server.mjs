@@ -1,6 +1,6 @@
 import express from "express";
 import request  from "request";
-var cron = require('node-cron');
+import cron  from 'node-cron';
 
 import qs  from "qs";
 
