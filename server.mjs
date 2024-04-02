@@ -45,7 +45,7 @@ setInterval(function() {
             let comments=json.list;
             for (const key in comments) {
                     const comment = comments[key];
-                    if (comment.userId==212031||comment.userId==55) {
+                    if (comment.userId==212031||comment.userId==55||comment.userId==8837) {
                         console.log(`If found a banded user @${comment.username}`);
                         try {
                             deletePost(comment); 
