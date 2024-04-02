@@ -1,5 +1,6 @@
 import express from "express";
 import request  from "request";
+var cron = require('node-cron');
 
 import qs  from "qs";
 
@@ -30,7 +31,11 @@ function deletePost(comment) {
             console.log(json.message);}
     });
 }
-setInterval(function() {
+
+cron.schedule('* * * * *', () => {
+
+
+//setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
@@ -60,7 +65,8 @@ setInterval(function() {
     });} catch (error) {
         console.log(`${error}`);
     }
-}, the_interval);
+//}, the_interval);
+  });
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
