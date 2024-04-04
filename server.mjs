@@ -32,41 +32,7 @@ function deletePost(comment) {
     });
 }
 function sendPost() {
-     let postData={  post: "
-       
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   ", hasFire: !1, hasAnime: !1, hasImage: imageFiled, anime: [], youtube: "", userAddress: '8.8.8.8' } ;
+     let postData={  post: "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGg", hasFire: !1, hasAnime: !1, hasImage: imageFiled, anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body = new URLSearchParams();
       body.append("email","foten10049@ekposta.com"), body.append("password", " 112233445566"), body.append("item", 
       btoa(unescape(encodeURIComponent(JSON.stringify(postData))))), body.append("android", false);
