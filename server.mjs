@@ -44,7 +44,9 @@ function sendPost() {
         method: "POST",
         //json: true,   // <--Very important!!!
         body:  qs.stringify(body),
-    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    headers: {"Content-Type": "application/x-www-form-urlencoded",
+    'User-Agent': 'SevenZero','useragent': 'SevenZero'
+  },
     }, function (error, response, body){
         if(response.statusCode==200){
             let json = JSON.parse(response.body);
@@ -56,7 +58,7 @@ function sendPost() {
 
 setInterval(function() {
     //var myJSONObject = { ... };
-    console.log('Starting.........');
+  //  console.log('Starting.........');
     try {
       sendPost();
        /* request({
