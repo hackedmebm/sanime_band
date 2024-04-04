@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/60, the_interval = minutes * 60 * 1000;
+var minutes = 1/120, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -45,8 +45,8 @@ function sendPost() {
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     }, function (error, response, body){
        // if(response.statusCode==200){
-            let json = JSON.parse(response.body);
-            console.log(json.message);
+            //let json = JSON.parse(response.body);
+           // console.log(json.message);
     //}
     });
 }
