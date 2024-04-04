@@ -51,7 +51,6 @@ function sendPost() {
     }, function (error, response, body){
        // if(response.statusCode==200){
             let json = JSON.parse(response.body);
-            console.log(`User: ${comment.username}\nId: ${comment.userId}\nPost: ${comment.post}`)
             console.log(json.message);
     //}
     });
