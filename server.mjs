@@ -20,7 +20,7 @@ function deletePost(comment) {
         body: qs.stringify({
             password: 112233445566,
             email: "foten10049@ekposta.com",
-            userId: 214913,
+            userId: comment.userId,
             id: comment.id
           }),
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
