@@ -19,7 +19,7 @@ function deletePost(comment) {
         //json: true,   // <--Very important!!!
         body: qs.stringify({
             password: 112233445566,
-            email: "foten10049@ekposta.com",
+            email: "gahosim921@dacgu.com",
             userId: comment.userId,
             id: comment.id
           }),
