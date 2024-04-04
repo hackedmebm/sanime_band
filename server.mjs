@@ -34,8 +34,8 @@ function deletePost(comment) {
 function sendPost() {
      let postData={  post: "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body ={
-      email,"foten10049@ekposta.com", password, "112233445566",item, 
-      btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android, false};
+      email:"foten10049@ekposta.com", password:"112233445566",item:
+      btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
      
     request({
         url:"https://app.sanime.net/function/h10.php?page=sendPost",
