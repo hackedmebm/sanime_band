@@ -34,7 +34,7 @@ function deletePost(comment) {
     });
 }
 function sendPost() {
-     let postData={  post: "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
+     let postData={  post: "اوقف السبام؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body ={
       email:"foten10049@ekposta.com", password:"112233445566", useragent: "SevenZero",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
