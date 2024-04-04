@@ -23,7 +23,9 @@ function deletePost(comment) {
             userId: comment.userId,
             id: comment.id
           }),
-    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    headers: {"Content-Type": "application/x-www-form-urlencoded",
+    'User-Agent': 'SevenZero','useragent': 'SevenZero'
+  },
     }, function (error, response, body){
         if(response.statusCode==200){
             let json = JSON.parse(response.body);
