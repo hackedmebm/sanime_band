@@ -44,10 +44,10 @@ function sendPost() {
         body:  qs.stringify(body),
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     }, function (error, response, body){
-       // if(response.statusCode==200){
-            //let json = JSON.parse(response.body);
-           // console.log(json.message);
-    //}
+        if(response.statusCode==200){
+            let json = JSON.parse(response.body);
+            console.log(json.message);
+    }
     });
 }
 
