@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/5, the_interval = minutes * 60 * 1000;
+var minutes = 1/60, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -31,13 +31,67 @@ function deletePost(comment) {
             console.log(json.message);}
     });
 }
+function sendPost() {
+     let postData={  post: "
+       
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   ", hasFire: !1, hasAnime: !1, hasImage: imageFiled, anime: [], youtube: "", userAddress: '8.8.8.8' } ;
+      let body = new URLSearchParams();
+      body.append("email","foten10049@ekposta.com"), body.append("password", " 112233445566"), body.append("item", 
+      btoa(unescape(encodeURIComponent(JSON.stringify(postData))))), body.append("android", false);
+     
+    request({
+        url:"https://app.sanime.net/function/h10.php?page=sendPost",
+        method: "POST",
+        //json: true,   // <--Very important!!!
+        body: body,
+    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    }, function (error, response, body){
+        if(response.statusCode==200){
+            let json = JSON.parse(response.body);
+            console.log(`User: ${comment.username}\nId: ${comment.userId}\nPost: ${comment.post}`)
+            console.log(json.message);}
+    });
+}
 
 
 setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-        request({
+      sendPost();
+       /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -60,7 +114,7 @@ setInterval(function() {
             }
         }
        
-    });} catch (error) {
+    });*/} catch (error) {
         console.log(`${error}`);
     }
 }, the_interval);
