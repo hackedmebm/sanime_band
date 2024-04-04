@@ -46,7 +46,7 @@ function sendPost() {
         url:"https://app.sanime.net/function/h10.php?page=sendPost",
         method: "POST",
         //json: true,   // <--Very important!!!
-        body: body,
+        body:  qs.stringify(body),
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     }, function (error, response, body){
        // if(response.statusCode==200){
