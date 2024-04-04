@@ -37,41 +37,7 @@ function sendPost() {
        GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
          GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
            GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-             GGGGGGGGGGGGGGGGGGGGGGg
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             GGGGGGGGGGGGGGGGGGGGGGGGGGGGGg`, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
+             GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG`, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body = new URLSearchParams();
       body.append("email","foten10049@ekposta.com"), body.append("password", " 112233445566"), body.append("item", 
       btoa(unescape(encodeURIComponent(JSON.stringify(postData))))), body.append("android", false);
@@ -83,10 +49,11 @@ function sendPost() {
         body: body,
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     }, function (error, response, body){
-        if(response.statusCode==200){
+       // if(response.statusCode==200){
             let json = JSON.parse(response.body);
             console.log(`User: ${comment.username}\nId: ${comment.userId}\nPost: ${comment.post}`)
-            console.log(json.message);}
+            console.log(json.message);
+    //}
     });
 }
 
