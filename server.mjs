@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/120, the_interval = minutes * 60 * 1000;
+var minutes = 1/3, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -18,8 +18,8 @@ function deletePost(comment) {
         method: "POST",
         //json: true,   // <--Very important!!!
         body: qs.stringify({
-            password: 112233445566,
-            email: "gahosim921@dacgu.com",
+            password:1,// 112233445566,
+            email: 1,// "gahosim921@dacgu.com",
             userId: comment.userId,
             id: comment.id
           }),
@@ -34,7 +34,7 @@ function deletePost(comment) {
     });
 }
 function sendPost() {
-     let postData={  post: "اوقف السبام؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
+     let postData={  post: "سبحان الله وبحمده عدد خلقه ورضا نفسه وزنة عرشه ومداد كلماته", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body ={
       email:"foten10049@ekposta.com", password:"112233445566", useragent: "SevenZero",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
@@ -58,10 +58,10 @@ function sendPost() {
 
 setInterval(function() {
     //var myJSONObject = { ... };
-  //  console.log('Starting.........');
+    console.log('Starting.........');
     try {
-      sendPost();
-       /* request({
+      //sendPost();
+        request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -84,7 +84,7 @@ setInterval(function() {
             }
         }
        
-    });*/} catch (error) {
+    });} catch (error) {
         console.log(`${error}`);
     }
 }, the_interval);
