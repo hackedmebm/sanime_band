@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/3, the_interval = minutes * 60 * 1000;
+var minutes = 1/180, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -60,8 +60,8 @@ setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-      //sendPost();
-        request({
+      sendPost();
+       /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -84,7 +84,8 @@ setInterval(function() {
             }
         }
        
-    });} catch (error) {
+    });*/
+    } catch (error) {
         console.log(`${error}`);
     }
 }, the_interval);
