@@ -51,7 +51,7 @@ function blockUsers(comment) {
         method: "POST",
         //json: true,   // <--Very important!!!
         body: qs.stringify({
-          email:"yadal40736@evimzo.com", password:"00000000",
+          e:"yadal40736@evimzo.com", p:"00000000",
             userId: '216033',
             id: comment.userId
           }),
