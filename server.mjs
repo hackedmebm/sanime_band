@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/3, the_interval = minutes * 60 * 1000;
+var minutes = 1/120, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -67,8 +67,7 @@ function blockUsers(comment) {
 'cors',
 'Sec-Fetch-Site':
 'same-site',
-'User-Agent':
-'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
+'User-Agent':'IBRAHIMSEVEN',
   },
     }, function (error, response, body){
         if(response.statusCode==200){
@@ -103,10 +102,10 @@ function sendPost() {
 
 setInterval(function() {
     //var myJSONObject = { ... };
-    console.log('Starting.........');
+    //console.log('Starting.........');
     try {
-  // sendPost();
-       request({
+    sendPost();
+      /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -134,7 +133,7 @@ setInterval(function() {
             }
         }
        
-    });
+    });*/
     } catch (error) {
         console.log(`${error}`);
     }
