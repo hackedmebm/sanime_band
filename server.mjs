@@ -45,9 +45,9 @@ function deletePost(comment) {
     });
 }
 function sendPost() {
-     let postData={  post: "............................................................................................................", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '0.0.0.0' } ;
+     let postData={  post: "تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي ", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '0.0.0.0' } ;
       let body ={
-      email:"nebonib559@evimzo.com", password:"00000000", useragent: "SevenZero",item:
+      email:"yadal40736@evimzo.com", password:"00000000", useragent: "SevenZero",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
      
     request({
@@ -71,8 +71,8 @@ setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-   //   sendPost();
-        request({
+    sendPost();
+       /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -97,7 +97,7 @@ setInterval(function() {
             }
         }
        
-    });
+    });*/
     } catch (error) {
         console.log(`${error}`);
     }
