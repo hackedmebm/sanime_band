@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/60, the_interval = minutes * 60 * 1000;
+var minutes = 1, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -45,7 +45,7 @@ function deletePost(comment) {
     });
 }
 function sendPost() {
-     let postData={  post: "تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي تاتاكاي ", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '0.0.0.0' } ;
+     let postData={  post: "﻿أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '0.0.0.0' } ;
       let body ={
       email:"yadal40736@evimzo.com", password:"00000000", useragent: "SevenZero",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
