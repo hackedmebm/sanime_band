@@ -23,7 +23,19 @@ function deletePost(comment) {
             id: comment.id
           }),
     headers: {"Content-Type": "application/x-www-form-urlencoded",
-    'User-Agent': 'SevenZero','useragent': 'SevenZero'
+  'useragent': 'SevenZero',
+              'Sec-Ch-Ua-Mobile':
+'?1',
+'Sec-Ch-Ua-Platform':
+"Android",
+'Sec-Fetch-Dest':
+'empty',
+'Sec-Fetch-Mode':
+'cors',
+'Sec-Fetch-Site':
+'same-site',
+'User-Agent':
+'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
   },
     }, function (error, response, body){
         if(response.statusCode==200){
@@ -61,7 +73,7 @@ setInterval(function() {
     try {
    //   sendPost();
         request({
-        url: "https://anime-ar.com/otaku/h1.php?page=post",
+        url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
        // body: myJSONObject
