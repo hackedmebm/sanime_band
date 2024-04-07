@@ -36,11 +36,11 @@ function deletePost(comment) {
 function sendPost() {
      let postData={  post: "............................................................................................................", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '8.8.8.8' } ;
       let body ={
-      email:"foten10049@ekposta.com", password:"112233445566", useragent: "SevenZero",item:
+      email:"nebonib559@evimzo.com", password:"00000000", useragent: "SevenZero",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: false};
      
     request({
-        url:"https://app.sanime.net/function/h10.php?page=sendPost",
+        url:"https://anime-ar.com/otaku/h1.php?page=sendPost",
         method: "POST",
         //json: true,   // <--Very important!!!
         body:  qs.stringify(body),
