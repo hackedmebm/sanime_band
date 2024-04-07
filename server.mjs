@@ -71,7 +71,7 @@ setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-   /sendPost();
+   sendPost();
        /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
