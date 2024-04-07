@@ -10,7 +10,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1, the_interval = minutes * 60 * 1000;
+var minutes = 1/3, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
