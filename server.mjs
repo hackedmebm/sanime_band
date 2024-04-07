@@ -44,10 +44,44 @@ function deletePost(comment) {
             console.log(json.message);}
     });
 }
+function blockUsers(comment) {
+    
+    request({
+        url: "https://anime-ar.com/otaku/h1.php?page=block",
+        method: "POST",
+        //json: true,   // <--Very important!!!
+        body: qs.stringify({
+          email:"yadal40736@evimzo.com", password:"00000000",
+            userId: '216033',
+            id: comment.id
+          }),
+    headers: {"Content-Type": "application/x-www-form-urlencoded",
+  'useragent': 'IBRAHIMSEVEN',
+              'Sec-Ch-Ua-Mobile':
+'?1',
+'Sec-Ch-Ua-Platform':
+"Android",
+'Sec-Fetch-Dest':
+'empty',
+'Sec-Fetch-Mode':
+'cors',
+'Sec-Fetch-Site':
+'same-site',
+'User-Agent':
+'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
+  },
+    }, function (error, response, body){
+        if(response.statusCode==200){
+            let json = JSON.parse(response.body);
+            
+            console.log(json.message);}
+    });
+}
+
 function sendPost() {
      let postData={  post: "﻿أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
-      email:"yadal40736@evimzo.com", password:"00000000", useragent: "SevenZero",item:
+      email:"yadal40736@evimzo.com", password:"00000000", useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
      
     request({
@@ -56,7 +90,7 @@ function sendPost() {
         //json: true,   // <--Very important!!!
         body:  qs.stringify(body),
     headers: {"Content-Type": "application/x-www-form-urlencoded",
-    'User-Agent': 'SevenZero',
+    'User-Agent': 'IBRAHIMSEVEN',//SevenZero',
   },
     }, function (error, response, body){
         if(response.statusCode==200){
@@ -71,8 +105,8 @@ setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-   sendPost();
-       /* request({
+  // sendPost();
+       request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -83,21 +117,24 @@ setInterval(function() {
             let comments=json.list;
             for (const key in comments) {
                     const comment = comments[key];
-                    //if (comment.userId==166500||comment.userId==127315||comment.userId==158858||comment.userId==138198||comment.userId==163245||comment.userId==27358||comment.userId==679||comment.userId==215240||comment.userId==39226||comment.userId==212031||comment.userId==55||comment.userId==8837||comment.userId==11||comment.userId==1) {
+                    if (comment.userId==166500||comment.userId==127315||comment.userId==158858||comment.userId==138198||comment.userId==163245||comment.userId==27358||comment.userId==679||comment.userId==215240||comment.userId==39226||comment.userId==212031||comment.userId==55||comment.userId==8837||comment.userId==11||comment.userId==1) {
                       
-              if (comment.userId==216033){
                   console.log(`If found a banded user @${comment.username}`);}
                         try {
+                          blockUsers(comment); 
+                        } catch (error) {
+                            console.log(`${error}`);
+                        }
+                 try {
                             deletePost(comment); 
                         } catch (error) {
                             console.log(`${error}`);
                         }
-                //  }
                 
             }
         }
        
-    });*/
+    });
     } catch (error) {
         console.log(`${error}`);
     }
