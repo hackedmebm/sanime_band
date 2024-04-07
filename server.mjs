@@ -53,7 +53,7 @@ function blockUsers(comment) {
         body: qs.stringify({
           email:"yadal40736@evimzo.com", password:"00000000",
             userId: '216033',
-            id: comment.id
+            id: comment.userId
           }),
     headers: {"Content-Type": "application/x-www-form-urlencoded",
   'useragent': 'IBRAHIMSEVEN',
