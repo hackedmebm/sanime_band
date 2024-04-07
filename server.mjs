@@ -71,8 +71,8 @@ setInterval(function() {
     //var myJSONObject = { ... };
     console.log('Starting.........');
     try {
-    sendPost();
-       /* request({
+   // sendPost();
+        request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
        // json: true,   // <--Very important!!!
@@ -97,7 +97,7 @@ setInterval(function() {
             }
         }
        
-    });*/
+    });
     } catch (error) {
         console.log(`${error}`);
     }
