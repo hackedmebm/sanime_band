@@ -74,13 +74,13 @@ setInterval(function() {
                     //if (comment.userId==166500||comment.userId==127315||comment.userId==158858||comment.userId==138198||comment.userId==163245||comment.userId==27358||comment.userId==679||comment.userId==215240||comment.userId==39226||comment.userId==212031||comment.userId==55||comment.userId==8837||comment.userId==11||comment.userId==1) {
                       
               if (comment.userId==216033){
-                  //console.log(`If found a banded user @${comment.username}`);
+                  console.log(`If found a banded user @${comment.username}`);}
                         try {
                             deletePost(comment); 
                         } catch (error) {
                             console.log(`${error}`);
                         }
-                  }
+                //  }
                 
             }
         }
