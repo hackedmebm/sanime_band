@@ -126,7 +126,7 @@ setInterval(function() {
                             console.log(`${error}`);
                         }
                  try {
-                            deletePost(comment); 
+                    ///        deletePost(comment); 
                         } catch (error) {
                             console.log(`${error}`);
                         }
