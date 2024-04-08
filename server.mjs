@@ -38,10 +38,10 @@ function deletePost(comment) {
 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
   },
     }, function (error, response, body){
-        if(response.statusCode==200){
+       /* if(response.statusCode==200){
             let json = JSON.parse(response.body);
             
-            console.log(json.message);}
+            console.log(json.message);}*/
     });
 }
 function blockUsers(comment) {
