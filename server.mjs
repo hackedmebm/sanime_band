@@ -111,7 +111,7 @@ setInterval(function() {
        // json: true,   // <--Very important!!!
        // body: myJSONObject
         }, function (error, response, body){
-        if(response.statusCode==200){
+        //if(response.statusCode==200){
             let json = JSON.parse(response.body);
             let comments=json.list;
             for (const key in comments) {
@@ -127,7 +127,7 @@ setInterval(function() {
                         }
                 
             }
-        }
+       // }
        
     });
     } catch (error) {
