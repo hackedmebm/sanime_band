@@ -111,7 +111,7 @@ setInterval(function() {
        // json: true,   // <--Very important!!!
        // body: myJSONObject
         }, function (error, response, body){
-        //if(response.statusCode==200){
+        if(response.statusCode==200){
             let json = JSON.parse(response.body);
             let comments=json.list;
             for (const key in comments) {
@@ -119,15 +119,15 @@ setInterval(function() {
                     if (comment.userId==166500||comment.userId==127315||comment.userId==158858||comment.userId==138198||comment.userId==163245||comment.userId==27358||comment.userId==679||comment.userId==215240||comment.userId==39226||comment.userId==212031||comment.userId==55||comment.userId==8837||comment.userId==11||comment.userId==1) {
                       
                   console.log(`If found a banded user @${comment.username}`);}
-                      
+                    if (comment.userId==216033){  
                  try {
                             deletePost(comment); 
                         } catch (error) {
                             console.log(`${error}`);
-                        }
+                        }}
                 
             }
-       // }
+        }
        
     });
     } catch (error) {
