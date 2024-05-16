@@ -98,13 +98,33 @@ function sendPost() {
     }
     });
 }
-
+function sendMessage() {
+      let body ={
+      email:"hacked.mebm@gmail.com", password:"hacked.mebm",
+       m: "﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت"} ;
+     
+    request({
+        url:"https://app.sanime.net/secure/chat/send.php",
+        method: "POST",
+        //json: true,   // <--Very important!!!
+        body:  qs.stringify(body),
+    headers: {"Content-Type": "application/x-www-form-urlencoded",
+    'User-Agent': 'IBRAHIMSEVEN',//SevenZero',
+  },
+    }, function (error, response, body){
+        if(response.statusCode==200){
+            let json = JSON.parse(response.body);
+            console.log(json.message);
+    }
+    });
+}
 
 setInterval(function() {
     //var myJSONObject = { ... };
     //console.log('Starting.........');
     try {
   sendPost();
+      sendMessage();
      /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
