@@ -18,7 +18,7 @@ function deletePost(comment) {
         method: "POST",
         //json: true,   // <--Very important!!!
         body: qs.stringify({
-          email:"yadal40736@evimzo.com", password:"00000000",
+          email:"hacked.mebm@gmail.com", password:"hacked.mebm",
             userId: '216033',
             id: comment.id
           }),
@@ -78,9 +78,9 @@ function blockUsers(comment) {
 }
 
 function sendPost() {
-     let postData={  post: "﻿أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
+     let postData={  post: "﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
-      email:"yadal40736@evimzo.com", password:"00000000", useragent: "IBRAHIMSEVEN",item:
+      email:"hacked.mebm@gmail.com", password:"hacked.mebm", useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
      
     request({
