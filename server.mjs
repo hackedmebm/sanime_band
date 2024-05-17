@@ -100,8 +100,8 @@ function sendPost() {
 }
 function sendMessage() {
       let body ={
-      email:"hacked.mebm@gmail.com", password:"hacked.mebm",
-       m: "﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت"} ;
+      email:"hacked.mebm@gmail.com", password:"hacked.mebm",m: 
+       btoa(unescape(encodeURIComponent("﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت")) } ;
      
     request({
         url:"https://app.sanime.net/secure/chat/send.php",
@@ -123,7 +123,7 @@ setInterval(function() {
     //var myJSONObject = { ... };
     //console.log('Starting.........');
     try {
-  sendPost();
+  //sendPost();
       sendMessage();
      /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
