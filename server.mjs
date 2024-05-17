@@ -113,8 +113,9 @@ function sendMessage() {
   },
     }, function (error, response, body){
         if(response.statusCode==200){
-            let json = JSON.parse(response.body);
-            console.log(json.message);
+          //  let json = JSON.parse(response.body);
+          //  console.log(json.message);
+          console.log(response.body);
     }
     });
 }
