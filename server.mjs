@@ -6,11 +6,65 @@ import qs  from "qs";
 
 const app = express();
 const port = 3000;
-
+const text=`.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       .`;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/120, the_interval = minutes * 60 * 1000;
+var minutes = 1/2, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -78,7 +132,7 @@ function blockUsers(comment) {
 }
 
 function sendPost() {
-     let postData={  post: "﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت", hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
+     let postData={  post: text, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
       email:"hacked.mebm@gmail.com", password:"hacked.mebm", useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
@@ -101,7 +155,7 @@ function sendPost() {
 function sendMessage() {
       let body ={
       email:"hacked.mebm@gmail.com", password:"hacked.mebm",m: 
-       btoa(unescape(encodeURIComponent("﻿انا الذي سمتني امي عبود رجل مو مسوي واحد كيوت"))) } ;
+       btoa(unescape(encodeURIComponent(text))) } ;
      
     request({
         url:"https://app.sanime.net/secure/chat/send.php",
