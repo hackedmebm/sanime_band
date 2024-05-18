@@ -64,7 +64,7 @@ const text=`.
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-var minutes = 1/2, the_interval = minutes * 60 * 1000;
+var minutes = 1/120, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
