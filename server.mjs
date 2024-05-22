@@ -63,9 +63,9 @@ const text=`.
        .`;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
-       update() ;
+       //update() ;
 });
-var minutes = 1/120, the_interval = minutes * 60 * 1000;
+var minutes = 1, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
@@ -204,7 +204,7 @@ setInterval(function() {
        
     try {
  // sendPost();
-      //sendMessage();
+      sendMessage();
      /* request({
         url: "https://app.sanime.net/function/h10.php?page=getPost",
         method: "GET",//"POST",
