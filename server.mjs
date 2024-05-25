@@ -65,7 +65,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to my server!');
        //update() ;
 });
-var minutes = 1/6, the_interval = minutes * 60 * 1000;
+var minutes = 1/60, the_interval = minutes * 60 * 1000;
 function deletePost(comment) {
     
     request({
