@@ -15,15 +15,17 @@ const sendPostBool=true;
 // عدد المرات في الدقيقه الواحده👇
 // اكثر شيء 60 اذا زدت عليها السيرفر بعلق
 const count = 6;
+const email= `حط ايميلك`;
+const password=`حط الباسورد`;
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
 var minutes = 1/count,the_interval = minutes * 60 * 1000;
 
 function sendPost() {
-     let postData={  post: text, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
+     let postData={  post: post, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
-      email:"hacked.mebm@gmail.com", password:"hacked.mebm", useragent: "IBRAHIMSEVEN",item:
+      email:email, password: password, useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
      
     request({
@@ -43,8 +45,8 @@ function sendPost() {
 
 function sendMessage() {
       let body ={
-      email:"hacked.mebm@gmail.com", password:"hacked.mebm",m: 
-       btoa(unescape(encodeURIComponent(text))) } ;
+      email:email, password: password,m: 
+       btoa(unescape(encodeURIComponent(message))) } ;
     request({
         url:"https://app.sanime.net/secure/chat/send.php",
         method: "POST",
