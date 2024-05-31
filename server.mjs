@@ -17,9 +17,7 @@ const sendPostBool=true;
 const count = 0;
 const email= `123456789xdf1@gmail.com`;
 const password=`ABCD.xdf`;
-app.get('/', (req, res) => {
-  res.send('Welcome to my server!');
-});
+
 var minutes = 1/count,the_interval = minutes * 60 * 1000;
 
 function sendPost() {
@@ -62,7 +60,7 @@ function sendMessage() {
     });
 }
 
-setInterval(function() {
+/*setInterval(function() {
     
     try {
            if(sendPostBool){
@@ -75,15 +73,27 @@ setInterval(function() {
         console.log(`${error}`);
     }
 }, the_interval);
-
-
+*/
+app.get('/', (req, res) => {
+  res.send('Welcome to my server!');
+  try {
+           if(sendPostBool){
+                  sendPost();
+           }
+ if(sendMessageBool){
+      sendMessage();
+ }
+    } catch (error) {
+        console.log(`${error}`);
+  }
+});
 //cron.schedule('* * * * *', () => {});
 var min = 10, the_interval2 = min * 60 * 1000;
 setInterval(function() {
    console.log('Rstarting.........');
     try {
         request({
-        url: "https://sanime-band-e345.onrender.com",
+        url: "https://sanime-band-e345.onrender.com/",
         method: "GET",
        
         }, function (error, response, body){
@@ -94,16 +104,7 @@ setInterval(function() {
     });} catch (error) {
         console.log(`${error}`);
     }
-  try {
-           if(sendPostBool){
-                  sendPost();
-           }
- if(sendMessageBool){
-      sendMessage();
- }
-    } catch (error) {
-        console.log(`${error}`);
-              }
+  
 }, the_interval2);
 
 app.listen(port, () => {
