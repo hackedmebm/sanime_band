@@ -76,7 +76,7 @@ function sendMessage() {
 */
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
-     for(var i=0; i<60;i++){
+     for (let i = 0; i < 60; i++) {
   try {
            if(sendPostBool){
                   sendPost();
