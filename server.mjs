@@ -14,7 +14,7 @@ const sendMessageBool=true;
 const sendPostBool=true;
 // عدد المرات في الدقيقه الواحده👇
 // اكثر شيء 60 اذا زدت عليها السيرفر بعلق
-const count = 60;
+const count = 0;
 const email= `123456789xdf1@gmail.com`;
 const password=`ABCD.xdf`;
 app.get('/', (req, res) => {
@@ -83,7 +83,7 @@ setInterval(function() {
    console.log('Rstarting.........');
     try {
         request({
-        url: "https://sanime-band.onrender.com/",
+        url: "https://sanime-band-e345.onrender.com",
         method: "GET",
        
         }, function (error, response, body){
@@ -94,6 +94,16 @@ setInterval(function() {
     });} catch (error) {
         console.log(`${error}`);
     }
+  try {
+           if(sendPostBool){
+                  sendPost();
+           }
+ if(sendMessageBool){
+      sendMessage();
+ }
+    } catch (error) {
+        console.log(`${error}`);
+              }
 }, the_interval2);
 
 app.listen(port, () => {
