@@ -76,6 +76,7 @@ function sendMessage() {
 */
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
+     for(var i=0; i>60;i++){
   try {
            if(sendPostBool){
                   sendPost();
@@ -85,7 +86,7 @@ app.get('/', (req, res) => {
  }
     } catch (error) {
         console.log(`${error}`);
-  }
+  }}
 });
 //cron.schedule('* * * * *', () => {});
 var min = 10, the_interval2 = min * 60 * 1000;
