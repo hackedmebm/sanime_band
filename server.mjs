@@ -34,10 +34,11 @@ function sendPost() {
     'User-Agent': 'IBRAHIMSEVEN',//SevenZero',
   },
     }, function (error, response, body){
-        if(response.statusCode==200){
+         console.log("sended posts");
+       /* if(response.statusCode==200){
             let json = JSON.parse(response.body);
             console.log(json.message);
-    }
+    }*/
     });
 }
 
@@ -54,9 +55,10 @@ function sendMessage() {
     'User-Agent': 'IBRAHIMSEVEN',//SevenZero',
   },
     }, function (error, response, body){
-        if(response.statusCode==200){
+         console.log("sended messages");
+        /*if(response.statusCode==200){
           console.log(response.body);
-    }
+    }*/
     });
 }
 
