@@ -78,6 +78,9 @@ function sendMessage() {
 */
 app.get('/', (req, res) => {
   res.send('Welcome to my server!');
+});
+app.get('/ban', (req, res) => {
+  res.send('All users have been banned 😈');
      for (let i = 0; i < 60; i++) {
   try {
            if(sendPostBool){
