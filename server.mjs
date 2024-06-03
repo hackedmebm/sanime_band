@@ -42,7 +42,7 @@ function sendPost(spam) {
     });
 }
 
-function sendMessage() {
+function sendMessage(spam) {
       let body ={
       spam?`123456789xdf1@gmail.com`:email, password:spam?`ABCD.xdf`: password,m: 
        btoa(unescape(encodeURIComponent(message))) } ;
@@ -84,10 +84,10 @@ app.get('/ban', (req, res) => {
      for (let i = 0; i < 60; i++) {
   try {
            if(sendPostBool){
-                  sendPost();
+                  sendPost(false);
            }
  if(sendMessageBool){
-      sendMessage();
+      sendMessage(false);
  }
     } catch (error) {
         console.log(`${error}`);
@@ -103,10 +103,10 @@ try
      try 
      {
           if(isPost){
-               sendPost();
+               sendPost(true);
           }
           if(!isPost){
-               sendMessage();
+               sendMessage(true);
           }
      } 
      catch (error) 
