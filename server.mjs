@@ -44,7 +44,7 @@ function sendPost(spam) {
 
 function sendMessage(spam) {
       let body ={
-      spam?email:`123456789xdf1@gmail.com`, password:spam?password:`ABCD.xdf`,m: 
+     email: spam?email:`123456789xdf1@gmail.com`, password:spam?password:`ABCD.xdf`,m: 
        btoa(unescape(encodeURIComponent(message))) } ;
     request({
         url:"https://app.sanime.net/secure/chat/send.php",
