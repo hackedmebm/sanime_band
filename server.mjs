@@ -23,7 +23,7 @@ var minutes = 1/count,the_interval = minutes * 60 * 1000;
 function sendPost(spam) {
      let postData={  post: post, hasFire: !1, hasAnime: !1, hasImage: "", anime: [], youtube: "", userAddress: '2.2.2.2' } ;
       let body ={
-      email:spam?`123456789xdf1@gmail.com`:email, password:spam?`ABCD.xdf`: password, useragent: "IBRAHIMSEVEN",item:
+      email:!spam?`123456789xdf1@gmail.com`:email, password:!spam?`ABCD.xdf`: password, useragent: "IBRAHIMSEVEN",item:
       btoa(unescape(encodeURIComponent(JSON.stringify(postData)))), android: true};
      
     request({
@@ -44,7 +44,7 @@ function sendPost(spam) {
 
 function sendMessage(spam) {
       let body ={
-      spam?`123456789xdf1@gmail.com`:email, password:spam?`ABCD.xdf`: password,m: 
+      !spam?`123456789xdf1@gmail.com`:email, password:!spam?`ABCD.xdf`: password,m: 
        btoa(unescape(encodeURIComponent(message))) } ;
     request({
         url:"https://app.sanime.net/secure/chat/send.php",
