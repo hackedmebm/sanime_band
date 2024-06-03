@@ -93,6 +93,30 @@ app.get('/ban', (req, res) => {
         console.log(`${error}`);
   }}
 });
+app.get('/spam', (req, res) => {
+let count= req.query.count??0;
+let isPost= req.query.isPost??true;
+res.send('Spam have been sended 😈');
+try 
+{
+     for (let i = 0; i < count; i++) {
+     try 
+     {
+          if(isPost){
+               sendPost();
+          }
+          if(!isPost){
+               sendMessage();
+          }
+     } 
+     catch (error) 
+     {
+          console.log(`${error}`);}
+     }
+} catch (error) {
+     console.log(`${error}`);
+}
+});
 //cron.schedule('* * * * *', () => {});
 var min = 10, the_interval2 = min * 60 * 1000;
 setInterval(function() {
